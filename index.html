@@ -2,14 +2,27 @@
 <html>
 <body>
 
-<h2>Use JavaScript to Change Text</h2>
-<p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
+<script>
+  const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+  
+  function my_find(mkey){
+    document.getElementById("demo").innerHTML = fruits.get(mkey);
+  }
+</script>
+  
+<form action="my_find(fname)">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  //<label for="lname">Last name:</label><br>
+  //<input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>  
 
 <p id="demo"></p>
-
-<script>
-document.getElementById("demo").innerHTML = "Hello JavaScript!";
-</script> 
 
 </body>
 </html>
